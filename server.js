@@ -12,7 +12,7 @@ var port = process.env.PORT || 8000;
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname)));
 // app.use('/auth', require('./routes/authroutes'));
 
 // mongoose.connect("mongodb://localhost/USER", function (err) {
