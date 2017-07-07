@@ -13,4 +13,8 @@ app.config(function($routeProvider) {
     .when('/signup', {
         templateUrl: './signup/signup.html'
     })
+    .when('/contact', {
+        controller: 'contactCtrl',
+        templateUrl: './viewes/contact/contact.html'
+    })
 });
