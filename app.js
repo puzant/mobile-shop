@@ -6,5 +6,11 @@ app.config(function($routeProvider) {
     .when('/', {
         controller: 'homeCtrl',
         templateUrl: './viewes/home/home.html'
-    });
+    })
+    .when('/login', {
+        templateUrl: './login/login.html'
+    })
+    .when('/signup', {
+        templateUrl: './signup/signup.html'
+    })
 });
