@@ -49,5 +49,7 @@ footer {
 }
 
     .logo{
-  height:56px; 
+  height:56px;
 }
+
+#success_message{ display: none;}
