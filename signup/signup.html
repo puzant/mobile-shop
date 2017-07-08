@@ -2,12 +2,12 @@
     <div class="login-card">
         <h1>create a new account</h1><br>
         <form>
-            <input type="text" name="user" placeholder="Username">
-            <input type="text" name="pass" placeholder="Email">
-            <input type="password" name="pass" placeholder="Password">
+            <input type="text" name="user" placeholder="Username" ng-model="user.username">
+            <input type="text" name="pass" placeholder="Email" ng-model="user.email">
+            <input type="password" name="pass" placeholder="Password" ng-model="user.password">
             <input type="password" name="pass" placeholder="Confirm Password">
 
-            <input type="submit" name="login" class="login login-submit" value="SignUp">
+            <input type="submit" name="login" class="login login-submit" value="SignUp" ng-click="submit(user)">
 
 
         </form>

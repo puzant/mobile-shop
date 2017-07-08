@@ -6,12 +6,14 @@ var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 var expressJwt = require("express-jwt");
 var config = require('./config');
-
+var cors = require('cors');
 
 var port = process.env.PORT || 8000;
 
+app.use(cors());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
+
 
 app.use(express.static(path.join(__dirname)));
  app.use('/auth', require('./routes/authroutes'));

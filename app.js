@@ -11,7 +11,8 @@ app.config(function($routeProvider) {
         templateUrl: './login/login.html'
     })
     .when('/signup', {
-        templateUrl: './signup/signup.html'
+        templateUrl: './signup/signup.html',
+        controller: 'signupCtrl'
     })
     .when('/contact', {
         controller: 'contactCtrl',
