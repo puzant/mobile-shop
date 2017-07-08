@@ -32,12 +32,19 @@ authRoutes.post("/login", function (req, res) {
     User.findOne({
         username: req.body.username.toLowerCase()
     }, function (err, user) {
+                console.log(req.body.password);
+                console.log(req.body.username);
+        
+        console.log(User.username);
+        console.log(User.password);
+        
+
         if (err) return res.status(500).send(err);
 
         if (!user || user.password !== req.body.password) {
             return res.status(403).send({
                 success: false,
-                message: "Email or password are incorrect"
+                message: "username or password are incorrect"
             })
         }
 

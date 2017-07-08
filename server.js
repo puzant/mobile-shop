@@ -13,12 +13,12 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname)));
-// app.use('/auth', require('./routes/authroutes'));
+ app.use('/auth', require('./routes/authroutes'));
 
-// mongoose.connect("mongodb://localhost/USER", function (err) {
-//     if (err) throw err;
-//     console.log("Successfully connected to the database");
-// });
+ mongoose.connect("mongodb://localhost/user", function (err) {
+     if (err) throw err;
+     console.log("Successfully connected to the database");
+ });
 
 app.get("/", function (req, res) {
     res.send("It's working");
