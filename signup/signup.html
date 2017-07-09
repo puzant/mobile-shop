@@ -5,7 +5,9 @@
             <input type="text" name="user" placeholder="Username" ng-model="user.username">
             <input type="text" name="pass" placeholder="Email" ng-model="user.email">
             <input type="password" name="pass" placeholder="Password" ng-model="user.password">
-            <input type="password" name="pass" placeholder="Confirm Password">
+            <input type="password" name="pass" ng-model="passwordRepeat" placeholder="Confirm Password">
+                            <span class="text-danger" ng-show="passwordMessage">{{passwordMessage}}</span>
+
 
             <input type="submit" name="login" class="login login-submit" value="SignUp" ng-click="submit(user)">
 
