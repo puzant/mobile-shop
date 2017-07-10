@@ -8,7 +8,8 @@ app.config(function($routeProvider) {
         templateUrl: './viewes/home/home.html'
     })
     .when('/login', {
-        templateUrl: './login/login.html'
+        templateUrl: './login/login.html',
+        controller:'loginCtrl'
     })
     .when('/signup', {
         templateUrl: './signup/signup.html',
@@ -17,6 +18,10 @@ app.config(function($routeProvider) {
     .when('/contact', {
         controller: 'contactCtrl',
         templateUrl: './viewes/contact/contact.html'
+    })
+    .when('/logout', {
+        controller:'LogoutController',
+        template: ""
     })
 });
 

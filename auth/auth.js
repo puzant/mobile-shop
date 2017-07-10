@@ -1,13 +1,13 @@
 var app = angular.module("app.Auth", []);
 
 app.service("TokenService" , [function(token){
-
+var userToken = "token";
   this.setToken = function(token){
       localStorage[userToken]= token;
   };
 
-  this.getToken = function(token){
-      localStorage[userToken];
+  this.getToken = function(){
+      return localStorage[userToken];
   };
 
   this.removeToken = function() {
@@ -37,3 +37,29 @@ this.isAuthenticated = function(){
 
   
 }])
+
+
+app.service('AuthInterceptor', ["$q", "$location", "TokenService", function($q, $location, TokenService) {
+    this.request = function(config) {
+        var token = TokenService.getToken();
+        
+        if(token) {
+            config.headers = config.header || {};
+            config.headers.Authorization = "Bearer" + token;
+        }
+        return config;
+    };
+    
+    this.responseError = function(res) {
+        if(res.status = 401) {
+            TokenService.removeToken();
+            $location.path('/login');
+        }
+        return $q.reject(response);
+    };
+    
+}]);
+
+app.config(["$httpProvider", function($httpProvider){
+    $httpProvider.interceptors.push("AuthInterceptor");
+}]);
