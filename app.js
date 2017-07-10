@@ -23,5 +23,8 @@ app.config(function($routeProvider) {
         controller:'LogoutController',
         template: ""
     })
+        .when('/store', {
+        templateUrl: "viewes/store/store.html"
+    })
 });
 
