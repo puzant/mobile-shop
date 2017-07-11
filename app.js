@@ -26,8 +26,8 @@ app.config(function($routeProvider) {
         .when('/store', {
         templateUrl: "viewes/store/store.html"
     })
-    .when('/index', {
-        templateUrl: "viewes/shoppingCart/index.html"
+    .when('/cart', {
+        templateUrl: "viewes/shoppingCart/cart.html"
     })
 });
 
