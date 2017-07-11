@@ -1,6 +1,6 @@
 var express = require('express');
 var mobileRoutes = express.Router();
-var mobile = require('./models/mobile')
+var mobile = require('../models/mobile');
 
 mobileRoutes.post('/', function(req, res) {
   var newPhone = new mobile(req.body);

@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname)));
 app.use('/auth', require('./routes/authroutes'));
-//app.use('api/mobile', require('/routes/MobileRoutes'))
+app.use('/api/mobile', require('./routes/MobileRoutes'))
 
 mongoose.connect(config.database, function (err) {
     if (err) throw err;
