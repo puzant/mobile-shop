@@ -8,4 +8,11 @@ app.controller("storeCtrl", function ($scope, $http) {
         $scope.data = res.data;
     })
 
+   $scope.add =function(x) {
+       $http.post('http://localhost:8000/api/cart', x._id).then(function(res) {
+           alert('your item was added to the cart');
+       }, function(err) {
+           alert('there was error' + err);
+       })
+   }
 })

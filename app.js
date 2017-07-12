@@ -28,7 +28,8 @@ app.config(function($routeProvider) {
         controller: "storeCtrl"
     })
     .when('/cart', {
-        templateUrl: "viewes/shoppingCart/cart.html"
+        templateUrl: "viewes/shoppingCart/cart.html",
+        controller: "cartCtrl"
     })
 });
 
