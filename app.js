@@ -24,7 +24,8 @@ app.config(function($routeProvider) {
         template: ""
     })
         .when('/store', {
-        templateUrl: "viewes/store/store.html"
+        templateUrl: "viewes/store/store.html",
+        controller: "storeCtrl"
     })
     .when('/cart', {
         templateUrl: "viewes/shoppingCart/cart.html"

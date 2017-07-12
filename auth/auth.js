@@ -15,7 +15,7 @@ var userToken = "token";
   };
 }])
 
-app.service("UserService", ["$http", "$location", "TokenService", function($http, $location, TokenService){
+app.service("UserService", ["$http", "$location", "TokenService2", function($http, $location, TokenService){
   this.signup = function(user){
     return $http.post('http://localhost:8000/auth/signup', user);
   };

@@ -54,7 +54,7 @@ authRoutes.post("/login", function (req, res) {
 
         return res.send({
             token: token,
-            user: user.toObject(),
+            user: user.toObject(),    
             success: true,
             message: "Here's your token!"
         })
