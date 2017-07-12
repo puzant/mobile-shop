@@ -44,8 +44,8 @@ app.service('AuthInterceptor', ["$q", "$location", "TokenService", function($q, 
         var token = TokenService.getToken();
 
         if(token) {
-            config.headers = config.header || {};
-            config.headers.Authorization = "Bearer" + token;
+            config.headers = config.headers || {};
+            config.headers.Authorization = "Bearer " + token;
         }
         return config;
     };

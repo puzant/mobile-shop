@@ -14,7 +14,7 @@ CartRoutes.route('/')
 })
 
 .get(function(req, res) {
-    Cart.findOneById(req.use._id, function(err, cart) {
+    Cart.findById(req.user._id, function(err, cart) {
         if(err) res.status(500).send(err);
           res.status(200).send(cart);
     })
