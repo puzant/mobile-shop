@@ -35,29 +35,29 @@ this.isAuthenticated = function(){
     return !!TokenService.getToken();
 };
 
-  
+
 }])
 
 
 app.service('AuthInterceptor', ["$q", "$location", "TokenService", function($q, $location, TokenService) {
     this.request = function(config) {
         var token = TokenService.getToken();
-        
+
         if(token) {
             config.headers = config.header || {};
             config.headers.Authorization = "Bearer" + token;
         }
         return config;
     };
-    
+
     this.responseError = function(res) {
         if(res.status = 401) {
             TokenService.removeToken();
             $location.path('/login');
         }
-        return $q.reject(response);
+        return $q.reject(res);
     };
-    
+
 }]);
 
 app.config(["$httpProvider", function($httpProvider){
