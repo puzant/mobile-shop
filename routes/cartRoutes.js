@@ -4,19 +4,34 @@ var Cart = require('../models/userCart');
 
 
 CartRoutes.route('/')
- .post(function(req, res) {
-    var cart = new Cart(req.body);
-    cart.user = req.user._id;
-    todo.save(function(err, cart) {
+.post(function(req, res) {
+    Cart.findOne({user:req.user._id}, function(err, cart) {
         if(err) res.status(500).send(err);
-          res.status(201).send(cart);
+          if(cart === null) {
+              var cart = new Cart();
+              cart.save(function(err, cart) {
+                  if(err) res.status(500).send(err);
+                   res.status(201).send(cart);
+              })
+          } else {
+              cart.mobile.push(req.body._id);
+              res.send(cart);
+          } 
     })
 })
 
 .get(function(req, res) {
-    Cart.findById(req.user._id, function(err, cart) {
-        if(err) res.status(500).send(err);
-          res.status(200).send(cart);
+    Cart.findOne({user:req.user._id})
+    .populate('mobile')
+    .exec(function(err, cart) {
+        if(err){
+            console.log("err in cart get");
+            res.status(500).send(err);
+        } else {
+            console.log(req.user._id);
+            console.log(cart);
+            res.status(200).send(cart);
+        }
     })
 })
 
