@@ -10,7 +10,7 @@ app.controller("storeCtrl", function ($scope, $http) {
 
    $scope.add =function(phone) {
        $http.post('http://localhost:8000/api/cart', phone).then(function(res) {
-           alert('your item was added to the cart');
+         swal("Item added!", "continue shopping now")
        }, function(err) {
            alert('there was error' + err);
        })
