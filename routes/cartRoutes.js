@@ -35,20 +35,26 @@ CartRoutes.route('/')
             console.log("err in cart get");
             res.status(500).send(err);
         } else {
-            console.log(req.user._id);
-            console.log(cart);
             res.status(200).send(cart);
         }
     })
 })
 
-CartRoutes.route('/:id')
+.get(function(req, res) {
+    Cart.findOne(function(err, data) {
+        if(err) res.status(500).send(err);
+        res.send(data)
+    })
+})
+
+CartRoutes.route('/:id/:index')
 .delete(function(req, res) {
-    Cart.findById(req.params.id, function(err, cart) {
+    console.log(req.params.id)
+    Cart.findOne({user:req.params.id}, function(err, cart) {
         if(err) res.status(500).send(cart);
-        var index = cart.mobile.indexOf(req.params._id)
-         mobile.splice(index, 1);
-        mobile.save(function(err, cart){
+        console.log(cart)
+        cart.mobile.splice(req.params.index, 1);
+        cart.save(function(err, cart){
             if(err) res.status(500).send(err);
              res.status(201).send(cart);
         })

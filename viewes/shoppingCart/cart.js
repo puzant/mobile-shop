@@ -6,14 +6,13 @@ app.controller('cartCtrl', function ($scope, $http) {
        $scope.data = res.data;
     })
 
-    $scope.deleteItem = function (info) {
-          $http.delete("http://localhost:8000/api/cart/" , info).then(function (res) {
+    $scope.deleteItem = function (item, index) {
+        console.log(item, index)
+          $http.delete("http://localhost:8000/api/cart/"+ item +"/" + index).then(function (res) {
               $http.get('http://localhost:8000/api/cart').then(function(res){
                 $scope.data = res.data;
               });
 
           });
       };
-
-
 })
