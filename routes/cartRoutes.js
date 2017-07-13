@@ -42,8 +42,17 @@ CartRoutes.route('/')
     })
 })
 
-//.delete(function(req, res) {
-//    Cart.deleteById
-//})
+CartRoutes.route('/:id')
+.delete(function(req, res) {
+    Cart.findById(req.params.id, function(err, cart) {
+        if(err) res.status(500).send(cart);
+        var index = cart.mobile.indexOf(req.params._id)
+         mobile.splice(index, 1);
+        mobile.save(function(err, cart){
+            if(err) res.status(500).send(err);
+             res.status(201).send(cart);
+        })
+    })
+})
 
 module.exports = CartRoutes;
