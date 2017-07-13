@@ -17,8 +17,12 @@ CartRoutes.route('/')
                    res.status(201).send(cart);
               })
           } else {
+              console.log(req.body);
               cart.mobile.push(req.body._id);
-              res.send(cart);
+              cart.save(function(err, cart) {
+                  if(err) res.status(500).send(err);
+                   res.status(201).send(cart);
+              })
           }
     })
 })
@@ -37,5 +41,9 @@ CartRoutes.route('/')
         }
     })
 })
+
+//.delete(function(req, res) {
+//    Cart.deleteById
+//})
 
 module.exports = CartRoutes;
