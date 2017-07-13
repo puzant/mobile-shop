@@ -9,6 +9,9 @@ CartRoutes.route('/')
         if(err) res.status(500).send(err);
           if(cart === null) {
               var cart = new Cart();
+              cart.user = req.user._id;
+              cart.mobile.push(req.body._id);
+
               cart.save(function(err, cart) {
                   if(err) res.status(500).send(err);
                    res.status(201).send(cart);
@@ -16,7 +19,7 @@ CartRoutes.route('/')
           } else {
               cart.mobile.push(req.body._id);
               res.send(cart);
-          } 
+          }
     })
 })
 
