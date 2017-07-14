@@ -17,7 +17,7 @@ var userToken = "token";
 
 app.service("UserService", ["$http", "$location", "TokenService", function($http, $location, TokenService){
   this.signup = function(user){
-    return $http.post('auth/signup', user);
+    return $http.post('/auth/signup', user);
   };
 
   this.login = function(user){
