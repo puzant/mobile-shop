@@ -72,6 +72,7 @@ footer {
     background-color: #494;
 }
 
+<<<<<<< HEAD
 .noBullets {
     list-style: none;
     padding: auto;
@@ -88,4 +89,37 @@ footer {
 
 .subscribe li {
     padding: 3px;
+}
+
+footer .widget {
+	margin-bottom: 30px;
+}
+
+footer .widget h5 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+
+.sub-footer {
+	border-top: 1px solid #fafafa;
+	padding: 50px 0 20px;
+}
+
+.sub-footer a{
+	color: #444;
+}
+
+footer .sub-footer  p {
+	font-size: 14px;
+}
+
+ul.social {
+	list-style: none;
+	padding-left: 0;
+}
+ul.social li {
+	display: inline;
+	margin-right: 5px;
 }
