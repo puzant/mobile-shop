@@ -1,6 +1,6 @@
-
 body {
     padding-top: 70px;
+    background-color: transparent;
 }
 
 .slide-image {
@@ -45,30 +45,51 @@ body {
 }
 
 footer {
-    margin: 50px 0;
+    width: 98%;
+    margin: 50px auto;
 }
 
-    .logo{
-  height:56px;
+.logo {
+    height: 56px;
 }
 
-#success_message{ display: none;}
+#success_message {
+    display: none;
+}
 
 .checkout {
-  float: right;
-  border: 0;
-  margin-top: 20px;
-  padding: 6px 25px;
-  background-color: #6b6;
-  color: #fff;
-  font-size: 25px;
-  border-radius: 3px;
+    float: right;
+    border: 0;
+    margin-top: 20px;
+    padding: 6px 25px;
+    background-color: #6b6;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 3px;
 }
 
 .checkout:hover {
-  background-color: #494;
+    background-color: #494;
 }
 
+<<<<<<< HEAD
+.noBullets {
+    list-style: none;
+    padding: auto;
+}
+
+#last-footer h5 {
+    text-align: center;
+}
+
+.footlinks li a {
+    text-align: center;
+    margin-left: 5px;
+}
+
+.subscribe li {
+    padding: 3px;
+}
 
 footer .widget {
 	margin-bottom: 30px;
