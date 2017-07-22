@@ -1,9 +1,20 @@
 <div class="container">
-    <div class="col-md-9">
+   <h2 class="header">Welcome the mobilio</h2>
 
-        <div class="row">
+       <div class="row">
+       <div class="col-md-12">   
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            <input ng-model="search" type="text" class="form-control" placeholder="search for something">
+        </div>
+           </div>
+    </div>
 
-            <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="x in data">
+   
+    <div class="row">
+        <div class="col-md-9">
+
+            <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="x in data | filter:search">
                 <div class="thumbnail">
                     <img src="{{x.image}}" alt="">
                     <div class="caption">
@@ -14,7 +25,7 @@
                     </div>
                     <div class="ratings">
                         <p>
-                            <span class="btn btn-primary btn-product"><span class="glyphicon glyphicon-thumbs-up"></span></span>
+                            <span class="btn btn-primary btn-product"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
                             <span class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart" ng-click="add(x)"></span></span>
                         </p>
                     </div>
@@ -24,114 +35,108 @@
     </div>
 
     <!-- Page Content -->
-    <div class="container">
 
-        <div class="row">
+    <div class="row">
 
+        <!--
             <div class="col-md-3">
                 <p class="lead">Mobilio</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">Mobile Phones</a>
-                    <a href="#" class="list-group-item">Tablets</a>
-                    <a href="#" class="list-group-item">Laptops</a>
+            </div>
+-->
+
+        <div class="col-md-9">
+
+            <div class="thumbnail">
+                <img class="img-responsive" src="./images/IMG_20170407_141113-800x500.jpg" alt="">
+                <div class="caption-full">
+                    <h4 class="pull-right">$780.99</h4>
+                    <h4><a href="#">Samsug Galaxy s8+</a></h4>
+                    <p>Samsung Galaxy S8+ smartphone was launched in March 2017. The phone comes with a 6.20-inch touchscreen display with a resolution of 1440 pixels by 2960 pixels at a PPI of 529 pixels per inch. Samsung Galaxy S8+ price in India starts from Rs. 64,900. </p>
+                    <p>The Samsung Galaxy S8+ is powered by 1.9GHz octa-core Samsung Exynos 8895 processor and it comes with 4GB of RAM. The phone packs 64GB of internal storage that can be expanded up to 256GB via a card. As far as the cameras are concerned, the Samsung Galaxy S8+ packs a 12-megapixel primary camera on the rear and a 8-megapixel front shooter for selfies.
+                    </p>
+
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">3 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span> 4.0 stars
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-9">
 
-                <div class="thumbnail">
-                    <img class="img-responsive" src="./images/IMG_20170407_141113-800x500.jpg" alt="">
-                    <div class="caption-full">
-                        <h4 class="pull-right">$780.99</h4>
-                        <h4><a href="#">Samsug Galaxy s8+</a></h4>
-                        <p>Samsung Galaxy S8+ smartphone was launched in March 2017. The phone comes with a 6.20-inch touchscreen display with a resolution of 1440 pixels by 2960 pixels at a PPI of 529 pixels per inch. Samsung Galaxy S8+ price in India starts from Rs. 64,900. </p>
-                        <p>The Samsung Galaxy S8+ is powered by 1.9GHz octa-core Samsung Exynos 8895 processor and it comes with 4GB of RAM. The phone packs 64GB of internal storage that can be expanded up to 256GB via a card. As far as the cameras are concerned, the Samsung Galaxy S8+ packs a 12-megapixel primary camera on the rear and a 8-megapixel front shooter for selfies.
-                        </p>
+            <div class="thumbnail">
+                <img class="img-responsive" src="./images/iphone7-colorful-banner-newsletter.jpg" alt="">
+                <div class="caption-full">
+                    <h4 class="pull-right">$780.99</h4>
+                    <h4><a href="#">Iphone 7</a></h4>
+                    <p>Apple iPhone 7 smartphone was launched in September 2016. The phone comes with a 4.70-inch touchscreen display with a resolution of 750 pixels by 1334 pixels at a PPI of 326 pixels per inch. Apple iPhone 7 price in India starts from Rs. 46,990. </p>
+                    <p>The Apple iPhone 7 is powered by quad-core Apple A10 Fusion processor and it comes with 2GB of RAM. The phone packs 32GB of internal storage cannot be expanded. As far as the cameras are concerned, the Apple iPhone 7 packs a 12-megapixel primary camera on the rear and a 7-megapixel front shooter for selfies.</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">3 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span> 4.0 stars
+                    </p>
+                </div>
+            </div>
 
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">3 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span> 4.0 stars
-                        </p>
+
+
+            <div class="well">
+
+                <div class="text-right">
+                    <a class="btn btn-success">Leave a Review</a>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span> Anonymous
+                        <span class="pull-right">10 days ago</span>
+                        <p>This product was great in terms of quality. I would definitely buy another!</p>
                     </div>
                 </div>
 
+                <hr>
 
-                <div class="thumbnail">
-                    <img class="img-responsive" src="./images/iphone7-colorful-banner-newsletter.jpg" alt="">
-                    <div class="caption-full">
-                        <h4 class="pull-right">$780.99</h4>
-                        <h4><a href="#">Iphone 7</a></h4>
-                        <p>Apple iPhone 7 smartphone was launched in September 2016. The phone comes with a 4.70-inch touchscreen display with a resolution of 750 pixels by 1334 pixels at a PPI of 326 pixels per inch. Apple iPhone 7 price in India starts from Rs. 46,990. </p>
-                        <p>The Apple iPhone 7 is powered by quad-core Apple A10 Fusion processor and it comes with 2GB of RAM. The phone packs 32GB of internal storage cannot be expanded. As far as the cameras are concerned, the Apple iPhone 7 packs a 12-megapixel primary camera on the rear and a 7-megapixel front shooter for selfies.</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">3 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span> 4.0 stars
-                        </p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span> Anonymous
+                        <span class="pull-right">12 days ago</span>
+                        <p>I've alredy ordered another one!</p>
                     </div>
                 </div>
 
+                <hr>
 
-
-                <div class="well">
-
-                    <div class="text-right">
-                        <a class="btn btn-success">Leave a Review</a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span> Anonymous
+                        <span class="pull-right">15 days ago</span>
+                        <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
                     </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span> Anonymous
-                            <span class="pull-right">10 days ago</span>
-                            <p>This product was great in terms of quality. I would definitely buy another!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span> Anonymous
-                            <span class="pull-right">12 days ago</span>
-                            <p>I've alredy ordered another one!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span> Anonymous
-                            <span class="pull-right">15 days ago</span>
-                            <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
@@ -139,4 +144,5 @@
         </div>
 
     </div>
+
 </div>
