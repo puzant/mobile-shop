@@ -15,4 +15,6 @@ app.controller("storeCtrl", function ($scope, $http) {
             alert('there was error' + err);
         })
     }
+    
+    
 })
