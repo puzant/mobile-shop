@@ -1,3 +1,11 @@
+.container {
+    
+}
+
+.thumbnail {
+ max-width: 80%;
+}
+
 .header {
     margin-bottom: 20px;
 }
