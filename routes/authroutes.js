@@ -34,10 +34,7 @@ authRoutes.post("/login", function (req, res) {
     }, function (err, user) {
                 console.log(req.body.password);
                 console.log(req.body.username);
-        
-        console.log(User.username);
-        console.log(User.password);
-        
+    
 
         if (err) return res.status(500).send(err);
 
@@ -58,6 +55,7 @@ authRoutes.post("/login", function (req, res) {
             success: true,
             message: "Here's your token!"
         })
+        
     });
 });
 
