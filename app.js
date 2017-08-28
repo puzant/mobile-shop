@@ -31,9 +31,8 @@ app.config(function($routeProvider) {
         templateUrl: "viewes/shoppingCart/cart.html",
         controller: "cartCtrl"
     })
-    .when('/news', {
-        templateUrl: "viewes/news/news.html",
-        controller: "newsCtrl"
+    .when('/profile', {
+        templateUrl: "viewes/profile/profile.html",
+        controller: 'profileCtrl'
     })
 });
-

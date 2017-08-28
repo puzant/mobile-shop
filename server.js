@@ -16,10 +16,13 @@ app.use(bodyParser.json());
 
 
 app.use(express.static(path.join(__dirname)));
+app.use('/api', expressJwt({secret:config.secret}));
+
+app.use('/auth/change-password', expressJwt({secret: config.secret}));
+
 app.use('/auth', require('./routes/authroutes'));
 app.use('/api/mobile', require('./routes/MobileRoutes'))
 
-app.use('/api', expressJwt({secret:config.secret}));
 app.use('/api/cart', require('./routes/cartRoutes'));
 
 mongoose.connect(config.database, function (err) {

@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="../login/loginstyle.css">
     <link rel="stylesheet" href="../signup/signup.css">
     <link rel="stylesheet" href="../viewes/store/style.css">
+    <link rel="stylesheet" href="../viewes/navbar/navbar.css">
     <!-- <link rel="stylesheet" type="text/css" href="viewes/shoppingCart/assets/css/cartstyle.css" /> -->
-
 
     <script type="text/javascript" src="js/jquery.js"></script>
 </head>
@@ -34,51 +34,35 @@
     <navbar></navbar>
 
     <ng-view></ng-view>
-    <!-- <div class="container"> -->
+    <hr>
 
-        <hr>
+    <footer>
 
-        <!-- Footer -->
-        <!-- <footer> -->
-            <!-- <div class="row"> -->
-                <!-- <div class="col-lg-12"> -->
-                    <!-- <p>Copyright &copy; Mobilio 2017</p> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </footer> -->
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
 
-    <!-- </div> -->
-    <!-- /.container -->
-
-
-	<footer>
-
-
-		<div class="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<ul class="social">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-					</ul>
-
-					<div class="wow fadeInLeft" data-wow-delay="0.1s">
-					<div class="text-left">
-					<p>&copy;Copyright 2017 - Mobilio. All rights reserved.</p>
-					</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<div class="wow fadeInRight" data-wow-delay="0.1s">
-					<div class="text-right margintop-30">
-						<p>Designed by <a href="http://facebook.com/techdesignerslb">Tech Designers</a></p>
-    </div>
-    <!--/.container-->
-    </div>
-    <!--/.row outer-->
+                        <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                            <div class="text-left">
+                                <p>&copy;Copyright 2017 - Mobilio. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div class="wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="text-right margintop-30">
+                                <p>Designed by <a href="http://facebook.com/techdesignerslb">Tech Designers</a></p>
+                            </div>
+                            <!--/.container-->
+                        </div>
+                        <!--/.row outer-->
     </footer>
 
     <!-- jQuery -->
@@ -89,8 +73,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="https://code.angularjs.org/1.5.6/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+
+    <!--angular strap goes gere-->
+
+      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/v2.3.8/angular-strap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/v2.3.8/angular-strap.tpl.min.js"></script>
 
     <script src="app.js"></script>
     <script src="viewes/contact/contact.js" charset="utf-8"></script>
@@ -104,6 +93,7 @@
     <script src="login/loginApp.js"></script>
     <script src="logout/logout.js"></script>
     <script src="viewes/navbar/navbar.js"></script>
+    <script src="viewes/profile/profileCtrl.js"></script>
 
 
 

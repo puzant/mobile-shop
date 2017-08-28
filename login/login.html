@@ -1,8 +1,11 @@
 <div class="login-card">
-        <h1>Welcome Back, Log-in</h1><br>
-        <form>
-            <input type="text" name="user" placeholder="Username" ng-model="user.username">
-            <input type="password" name="pass" placeholder="Password" ng-model="user.password">
-            <input type="submit" name="login" class="login login-submit" value="login" ng-click="login(user)">
-        </form>
+    <h1>Welcome Back, Log-in</h1><br>
+    <form>
+        <input type="text" name="user" placeholder="Username" ng-model="user.username">
+        <input type="password" name="pass" placeholder="Password" ng-model="user.password">
+        <input type="submit" name="login" class="login login-submit" value="login" ng-click="login(user)" data-animation="am-fade-and-scale">
+        <p>Or LogIn With</p>
+        <a class="social"><i id="facebook" class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+        <a class="social"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a>
+    </form>
 </div>

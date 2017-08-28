@@ -1,8 +1,7 @@
 var app = angular.module("app");
 
 app.controller("storeCtrl", function ($scope, $http) {
-    // get data from the database
-    
+    // get data from the database    
     $http.get('/api/mobile').then(function (res) {
         console.log(res.data); //the api object
         $scope.data = res.data;

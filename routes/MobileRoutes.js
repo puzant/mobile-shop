@@ -17,11 +17,11 @@ mobileRoutes.post('/', function(req, res) {
 
 mobileRoutes.route('/')
 .get(function(req, res){
-    mobile.find(function(err, workout){
+    mobile.find(function(err, mobile){
         if(err){
             res.status(500).send(err);
         } else {
-            res.send(workout)
+            res.send(mobile)
         }
     })
 })
